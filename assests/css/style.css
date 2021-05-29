@@ -72,7 +72,7 @@ body {
     line-height: 1.6rem;
 }
 
-h1,h2,h3,p,ul {
+h1, h2, h3, p, ul {
     margin: 0;
 }
 
@@ -123,7 +123,7 @@ img {
 
 .bg-grid {
     display: grid;
-    gap: 1.5rem
+    grid-gap: 1.5rem;
 }
 
 .l-header {
@@ -233,4 +233,37 @@ img {
 .scroll-top {
     visibility: visible;
     bottom: 1.5rem;
+}
+
+/*#### HOME ####*/
+
+.home__container {
+    height: calc(80vh - var(--header-height));
+    align-items: center;
+}
+
+.home__title {
+    font-size: var(--biggest-font-size);
+    color: var(--first-color);
+    margin-bottom: var(--mb-4);
+}
+
+.home__subtitle {
+    font-size: var(--h1-font-size);
+    color: var(--title-color);
+    margin-bottom: var(--mb-4);
+}
+
+.home__img {
+    width: 300px;
+}
+
+/*#### BUTTONS ####*/
+
+.button {
+    display: inline-block;
+    background-color: var(--first-color);
+    color: #FFFFFF;
+    padding: .75rem 1rem;
+    border-radius: .5rem;
 }
