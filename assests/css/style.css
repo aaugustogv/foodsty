@@ -63,6 +63,25 @@ html {
     scroll-behavior: smooth;
 }
 
+/*#### Dark theme ####*/
+body.dark-theme {
+    --title-color: #F1F3F2;
+    --text-color: #C7D1CC;
+    --body-color: #1D2521;
+    --container-color: #27302C ;
+    transition: 0.6s;
+}
+
+/* Button Dark Theme*/ 
+.change-theme {
+    position: absolute;
+    right: 1.8rem;
+    top: 1.8rem;
+    color: var(--text-color);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
 body {
     margin: var(--header-height) 0 0 0;
     font-family: var(--body-font);
@@ -88,6 +107,7 @@ img {
     max-width: 100%;
     height: auto;
 }
+
 
 /*#### CLASS CSS ####*/
 
@@ -140,6 +160,10 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.nav__link, .nav__logo, .nav__toggle {
+    color: var(--text-color);
+    font-weight: var(--font-medium);
 }
 
 @media screen and (max-width: 768px) {
@@ -442,3 +466,108 @@ img {
 }
 
 /*Vamos fazer responsivo*/
+
+@media screen and (min-width: 576px){
+    .home__container,
+    .about__container,
+    .app__container {
+        grid-template-columns: repeat(2,1fr);
+        align-items: center;
+    }
+    .services__container {
+        grid-template-columns: repeat(3,3fr);
+    }
+
+    .about__data, .about__initial,
+    .app__data, .app__initial,
+    .contact__container, .contact__initial {
+        text-align: initial;
+    }
+
+    .about__img, .app__img {
+        width: 380px;
+        order: -1;
+    }
+    
+    .contact__container {
+        grid-template-columns: 1.75fr 1fr;
+        align-items: center;
+    }
+    .contact__button {
+        justify-self: center;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        margin:0;
+    }
+
+    .section {
+        padding-top: 8rem;
+    }
+
+    .nav {
+        height: calc(var(--header-height) + 1.5rem);
+    }
+
+    .nav-list {
+        display: flex;
+    }
+
+    .nav__item {
+        margin-left: var(--mb-5);
+        margin-bottom: 0;
+    }
+
+    .nav__toggle {
+        display: none;
+    }
+
+    .change-theme {
+        position: initial;
+        margin-left: var(--mb-3) ;
+    }
+
+    .home__container {
+        height: 100vh;
+        justify-items: center;
+    }
+
+    .services__container, .menu__container {
+        margin-top: var(--mb-6);
+    }
+
+    .menu__container {
+        grid-template-columns: repeat(3, 240px);
+    }
+
+    .menu__content {
+        padding: 1.5rem;
+    }
+
+    .menu__img {
+        width: 130px;
+    }
+
+    .app__store {
+        margin: 0 var(--mb-1) 0 0;
+    }
+}
+
+@media screen and (min-width: 960px){
+    .bd-container {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .home__img {
+      width: 500px;
+    }
+  
+    .about__container,
+    .app__container {
+      column-gap: 7rem;
+    }
+  }
+  
