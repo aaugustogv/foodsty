@@ -69,7 +69,6 @@ body {
     font-size:  var(--normal-font-size);
     background-color:  var(--body-color);
     color: var(--text-color);
-    line-height: 1.6rem;
 }
 
 h1, h2, h3, p, ul {
@@ -96,7 +95,7 @@ img {
     padding: 4rem 0 2rem;
 }
 
-.section-title, .section-subitlite{
+.section-title, .section-subtitle{
     text-align: center;
 }
 
@@ -106,7 +105,7 @@ img {
     margin-bottom: var(--mb-3);
 }
 
-.section-subitlite {
+.section-subtitle {
     display: block;
     color: var(--first-color);
     font-weight: var(--font-medium);
@@ -121,9 +120,9 @@ img {
     margin-right: var(--mb-2);
 }
 
-.bg-grid {
+.bd-grid {
     display: grid;
-    grid-gap: 1.5rem;
+    gap: 1.5rem;
 }
 
 .l-header {
@@ -200,64 +199,63 @@ img {
 /* #### CHANGE BACKGROUND HEADR ####*/
 
 .scroll-header {
-    box-shadow:  0 2px 40px rgba(0,0,0, .1);
+    box-shadow:  0 2px 4px rgba(0,0,0, .1);
 }
 
 /* #### SCROLL TOP ####*/
 
-.scrolltop {
-    position: fixed;
-    right: 1rem;
-    bottom: -20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: .3rem;
-    background: rgba(6,156,84,.5);
-    border-radius: .4rem;
-    z-index: var(--z-tooltip);
-    visibility: hidden;
+.scrolltop{
+  position: fixed;
+  right: 1rem;
+  bottom: -20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .3rem;
+  background: rgba(6,156,84,.5);
+  border-radius: .4rem;
+  z-index: var(--z-tooltip);
+  transition: .4s;
+  visibility: hidden;
 }
 
-.scrolltop:hover {
-    background-color: var(--first-color-alt);
+.scrolltop:hover{
+  background-color: var(--first-color-alt);
 }
 
-.scrolltop__icon {
-    font-size: 1.8rem;
-    color: var(--body-color);
+.scrolltop__icon{
+  font-size: 1.8rem;
+  color: var(--body-color);
 }
 
-/* #### SHOW SCROLLTOP ####*/
-
-.scroll-top {
-    visibility: visible;
-    bottom: 1.5rem;
+/* Show scrolltop */
+.show-scroll{
+  visibility: visible;
+  bottom: 1.5rem;
 }
 
-/*#### HOME ####*/
-
+/*========== HOME ==========*/
 .home__container {
-    height: calc(80vh - var(--header-height));
-    align-items: center;
+    height: calc(100vh - var(--header-height));
+    align-content: center;
 }
-
+  
 .home__title {
     font-size: var(--biggest-font-size);
     color: var(--first-color);
-    margin-bottom: var(--mb-4);
 }
-
+  
 .home__subtitle {
     font-size: var(--h1-font-size);
     color: var(--title-color);
     margin-bottom: var(--mb-4);
 }
-
+  
 .home__img {
     width: 300px;
+    justify-self: center;
 }
-
+  
 /*#### BUTTONS ####*/
 
 .button {
@@ -266,5 +264,22 @@ img {
     color: #FFFFFF;
     padding: .75rem 1rem;
     border-radius: .5rem;
-    ma
+    
 }
+
+/*#### ABOUT ####*/
+.about__data{
+    text-align: center;
+}
+  
+.about__description{
+    margin-bottom: var(--mb-3);
+}
+  
+.about__img{
+    width: 280px;
+    border-radius: .5rem;
+    justify-self: center;
+}
+
+/*#### SERVICES ####*/
